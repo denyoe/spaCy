@@ -53,7 +53,7 @@ p
 
     nlp = spacy.load('en')
     sentences = ["This is an example.", "This is another one."]
-    for sent in sentences:
+    for sentence in sentences:
         doc = nlp(sentence)
         svg = displacy.render(doc, style='dep')
         file_name = '-'.join([w.text for w in doc if not w.is_punct]) + '.svg'
